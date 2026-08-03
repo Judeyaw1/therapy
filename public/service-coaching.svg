@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="coachingPlaceholderTitle">
+  <title id="coachingPlaceholderTitle">Placeholder image — replace with a photo</title>
+  <defs>
+    <linearGradient id="coachBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cb997e" />
+      <stop offset="100%" stop-color="#ddbea9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#coachBg)" />
+  <polyline
+    points="180,420 340,320 460,380 620,200"
+    fill="none"
+    stroke="#6b705c"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.85"
+  />
+  <circle cx="620" cy="200" r="26" fill="#6b705c" opacity="0.85" />
+  <circle cx="180" cy="420" r="16" fill="#a5a58d" opacity="0.85" />
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#3a3a30" opacity="0.5">
+    Replace with a photo
+  </text>
+</svg>

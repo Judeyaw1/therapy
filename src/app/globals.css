@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --ark-brown: #cb997e;
+  --ark-tan: #ddbea9;
+  --ark-cream: #ffe8d6;
+  --ark-sage: #b7b7a4;
+  --ark-olive: #a5a58d;
+  --ark-deep: #6b705c;
+
+  --background: #fffaf5;
+  --foreground: #3a3a30;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ark-brown: var(--ark-brown);
+  --color-ark-tan: var(--ark-tan);
+  --color-ark-cream: var(--ark-cream);
+  --color-ark-sage: var(--ark-sage);
+  --color-ark-olive: var(--ark-olive);
+  --color-ark-deep: var(--ark-deep);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-work-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-work-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-fraunces), serif;
+  letter-spacing: -0.01em;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
