@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import arkLogo from "@/asset/ark-logo.png";
+import arkLogo from "@/asset/newlogo-transparent.png";
 import { businessName, contactInfo, nav } from "@/lib/content";
 
 export function Footer() {
@@ -9,7 +9,9 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <Image src={arkLogo} alt={businessName} className="h-10 w-auto" />
+            <div className="inline-block rounded-xl bg-ark-cream/90 px-4 py-2">
+              <Image src={arkLogo} alt={businessName} className="h-8 w-auto" />
+            </div>
             <p className="mt-3 max-w-xs text-sm text-ark-cream/70">
               Rooted in compassion. Culturally responsive. Honoring your story through evidence-based and
               integrative care that cultivates healing.
