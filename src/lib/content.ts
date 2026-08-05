@@ -191,34 +191,60 @@ export const serviceCategories: ServiceCategory[] = [
 ];
 
 export const servicesHero = {
-  eyebrow: "Services",
   heading: "Care that meets you where you are",
   intro:
     "Psychotherapy, coaching, and consultation & training — matched to your goals, your schedule, and the pace that feels right for you.",
-  primaryCta: { label: "Book a Consultation", href: "/contact" },
-  secondaryCta: { label: "Meet the Founder", href: "/about" },
-  infoCards: [
-    { label: "Session Formats", value: "Individual, couples, family & group sessions" },
-    { label: "Availability", value: "In-person & telehealth across Maryland" },
-    { label: "Access", value: "Free consultation before your first session" },
-    { label: "Support", value: "Call or text 988 for 24/7 crisis support" },
-  ],
 };
 
-export const servicesOffer = {
-  eyebrow: "What We Offer",
-  heading: "Support for every stage of the journey",
+export type ServiceAccordionEntry = {
+  id: "psychotherapy" | "consultation" | "coaching";
+  title: string;
+  intro: string;
+  whoItsFor: string;
+  includes: string[];
 };
 
-export const matchingSteps = [
-  { step: 1, title: "Free introductory consultation" },
-  { step: 2, title: "Thoughtful matching with the right therapist" },
-  { step: 3, title: "Flexible in-person & telehealth scheduling" },
-  { step: 4, title: "Insurance & payment options confirmed before your first session" },
+export const serviceAccordion: ServiceAccordionEntry[] = [
+  {
+    id: "psychotherapy",
+    title: "Psychotherapy",
+    intro: homeServices.find((service) => service.id === "psychotherapy")!.body,
+    whoItsFor:
+      "Individuals, couples, families, and groups navigating anxiety, depression, trauma, relationship challenges, or major life transitions.",
+    includes: serviceCategories.find((category) => category.id === "psychotherapy")!.items.map((item) => item.title),
+  },
+  {
+    id: "consultation",
+    title: "Consulting",
+    intro: homeServices.find((service) => service.id === "consultation")!.body,
+    whoItsFor: "Providers, organizations, and teams looking to build more culturally responsive, sustainable systems of care.",
+    includes: serviceCategories.find((category) => category.id === "consultation")!.items.map((item) => item.title),
+  },
+  {
+    id: "coaching",
+    title: "Coaching",
+    intro: homeServices.find((service) => service.id === "coaching")!.body,
+    whoItsFor:
+      "Individuals and professionals seeking a future-focused space to clarify goals, navigate transitions, and build confidence. Coaching is not a substitute for psychotherapy or mental health treatment.",
+    includes: serviceCategories.find((category) => category.id === "coaching")!.items.map((item) => item.title),
+  },
 ];
 
-export const servicesCta = {
-  eyebrow: "Ready When You Are",
-  heading: "Not sure which service is the right fit? Let's figure it out together.",
-  cta: { label: "Book a Consultation", href: "/contact" },
+export const feesPolicy = {
+  eyebrow: "Fees & Payment Policy",
+  sections: [
+    {
+      title: "Session Formats & Fees",
+      body: "Session length and cadence vary by service — from 50-minute individual sessions to 80-minute group sessions. Specific fees are discussed during your initial consultation or scheduled intake.",
+    },
+    {
+      title: "Insurance & Reimbursement",
+      body: "Insurance coverage varies by plan. Reach out and we'll help you understand your in-network and out-of-network options before your first session.",
+    },
+    {
+      title: "Payment Methods",
+      body: "We accept credit and debit cards, HSA/FSA cards, and cash or check. Full payment is due at the time of service.",
+    },
+  ],
+  cta: { label: "See full rates & insurance details", href: "/rates" },
 };
