@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import type { ServiceAccordionEntry } from "@/lib/content";
 
 export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[] }) {
@@ -35,30 +36,36 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
               style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
             >
               <div className="overflow-hidden">
-                <div className="max-w-2xl pb-8 text-ark-cream/85">
-                  <p className="leading-relaxed">{entry.intro}</p>
+                <div className="grid gap-8 pb-8 sm:grid-cols-[1fr_auto]">
+                  <div className="max-w-2xl text-ark-cream/85">
+                    <p className="leading-relaxed">{entry.intro}</p>
 
-                  <p className="mt-5">
-                    <span className="font-semibold text-ark-cream">Who It&apos;s For: </span>
-                    {entry.whoItsFor}
-                  </p>
+                    <p className="mt-5">
+                      <span className="font-semibold text-ark-cream">Who It&apos;s For: </span>
+                      {entry.whoItsFor}
+                    </p>
 
-                  <p className="mt-5 font-semibold text-ark-cream">What&apos;s Included:</p>
-                  <ul className="mt-2 space-y-1.5">
-                    {entry.includes.map((item) => (
-                      <li key={item} className="flex gap-2">
-                        <span aria-hidden>&bull;</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <p className="mt-5 font-semibold text-ark-cream">What&apos;s Included:</p>
+                    <ul className="mt-2 space-y-1.5">
+                      {entry.includes.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span aria-hidden>&bull;</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <Link
-                    href="/contact"
-                    className="mt-5 inline-block text-sm font-semibold text-ark-cream underline-offset-4 hover:underline"
-                  >
-                    Learn more &amp; book &rarr;
-                  </Link>
+                    <Link
+                      href="/contact"
+                      className="mt-5 inline-block text-sm font-semibold text-ark-cream underline-offset-4 hover:underline"
+                    >
+                      Learn more &amp; book &rarr;
+                    </Link>
+                  </div>
+
+                  <div className="relative aspect-4/5 w-full flex-none overflow-hidden rounded-2xl sm:w-80">
+                    <Image src={entry.image} alt="" fill sizes="320px" className="object-cover" />
+                  </div>
                 </div>
               </div>
             </div>

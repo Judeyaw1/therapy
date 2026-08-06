@@ -9,10 +9,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <div className="inline-block rounded-xl bg-ark-cream/90 px-4 py-2">
+            <div className="inline-block rounded-xl bg-white px-4 py-2">
               <Image src={arkLogo} alt={businessName} className="h-8 w-auto" />
             </div>
-            <p className="mt-3 max-w-xs text-sm text-ark-cream/70">
+            <p className="mt-3 max-w-xs text-sm text-white">
               Rooted in compassion. Culturally responsive. Honoring your story through evidence-based and
               integrative care that cultivates healing.
             </p>
@@ -23,7 +23,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-ark-cream/80 transition-colors hover:text-white">
+                  <Link href={item.href} className="text-white transition-colors hover:text-ark-tan">
                     {item.label}
                   </Link>
                 </li>
@@ -33,7 +33,7 @@ export function Footer() {
 
           <div>
             <p className="text-xs font-semibold tracking-widest text-ark-tan uppercase">Contact</p>
-            <ul className="mt-4 space-y-2.5 text-sm text-ark-cream/80">
+            <ul className="mt-4 space-y-2.5 text-sm text-white">
               <li>{contactInfo.email}</li>
               <li>{contactInfo.phone}</li>
               <li>{contactInfo.location}</li>

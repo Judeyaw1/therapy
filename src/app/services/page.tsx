@@ -18,7 +18,7 @@ export default function ServicesPage() {
         <p className="mt-4 text-ark-cream/80">{servicesHero.intro}</p>
       </Container>
 
-      <Container className="mt-14 max-w-3xl">
+      <Container className="mt-14 max-w-5xl">
         <ServicesAccordion entries={serviceAccordion} />
       </Container>
 
