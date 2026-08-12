@@ -32,13 +32,13 @@ export const homeServices: HomeServiceTeaser[] = [
   {
     id: "psychotherapy",
     title: "Psychotherapy",
-    body: "We provide evidence-based psychotherapy services tailored to your unique needs, including individual, relational, family, and group therapy. Our approach is grounded in cultural responsiveness, recognizing and honoring the diverse identities, values, and lived experiences that shape each person's journey. Through a collaborative, whole-person approach, we coordinate with your other healthcare providers and support systems to promote seamless, integrative care and foster meaningful, lasting healing.",
+    body: "We provide evidence-based psychotherapy services tailored to your unique needs, including individual, relational, family, and group therapy.",
     image: "/service-psychotherapy.svg",
   },
   {
     id: "consultation",
     title: "Consulting",
-    body: "From clinical consultation to cultural responsiveness training, workshops, and organizational wellness, we partner with providers and organizations to build more culturally responsive, sustainable systems of care.",
+    body: "Clinical consultation to cultural responsiveness training, workshops, and organizational wellness",
     image: "/service-consultation.svg",
   },
   {

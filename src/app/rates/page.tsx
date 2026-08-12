@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { feesPolicy } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Rates & Insurance | ARK Counseling Collective",
@@ -87,6 +88,21 @@ export default function RatesPage() {
             >
               Ask About Rates
             </Link>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-ark-deep/10 bg-ark-cream/30 py-24">
+        <Container className="max-w-3xl">
+          <h2 className="font-display text-3xl font-medium text-ark-deep italic sm:text-4xl">{feesPolicy.eyebrow}</h2>
+
+          <div className="mt-12 space-y-14">
+            {feesPolicy.sections.map((section, index) => (
+              <div key={section.title} className={index % 2 === 1 ? "sm:ml-auto sm:max-w-md" : "sm:max-w-md"}>
+                <h3 className="font-display text-xl font-medium text-ark-deep">{section.title}</h3>
+                <p className="mt-3 leading-relaxed text-ark-deep/75">{section.body}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>

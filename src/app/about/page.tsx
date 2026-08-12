@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="border-b border-ark-deep/10 bg-ark-cream/40 py-20">
         <Container>
           <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">About Us</p>
-          <h1 className="mt-3 text-justify font-display text-4xl font-medium text-ark-deep sm:text-5xl">
+          <h1 className="mt-3 font-display text-lg font-medium text-ark-deep sm:text-xl">
             {about.intro}
           </h1>
         </Container>

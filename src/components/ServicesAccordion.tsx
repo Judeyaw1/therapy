@@ -9,22 +9,22 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
   const [openId, setOpenId] = useState<string | null>(entries[0]?.id ?? null);
 
   return (
-    <div className="border-t border-ark-cream/30">
+    <div className="border-t border-ark-deep/10">
       {entries.map((entry) => {
         const isOpen = openId === entry.id;
         return (
-          <div key={entry.id} className="border-b border-ark-cream/30">
+          <div key={entry.id} className="border-b border-ark-deep/10">
             <button
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpenId(isOpen ? null : entry.id)}
               className="flex w-full items-center justify-between py-6 text-left"
             >
-              <span className="font-display text-xl font-medium text-ark-cream sm:text-2xl">{entry.title}</span>
+              <span className="font-display text-xl font-medium text-ark-deep sm:text-2xl">{entry.title}</span>
               <span className="relative ml-6 h-4 w-4 flex-none">
-                <span className="absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-cream" />
+                <span className="absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-deep" />
                 <span
-                  className={`absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-cream transition-transform duration-200 ${
+                  className={`absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-deep transition-transform duration-200 ${
                     isOpen ? "rotate-0 scale-x-0" : "rotate-90"
                   }`}
                 />
@@ -37,15 +37,15 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
             >
               <div className="overflow-hidden">
                 <div className="grid gap-8 pb-8 sm:grid-cols-[1fr_auto]">
-                  <div className="max-w-2xl text-ark-cream/85">
+                  <div className="max-w-2xl text-ark-deep/80">
                     <p className="leading-relaxed">{entry.intro}</p>
 
                     <p className="mt-5">
-                      <span className="font-semibold text-ark-cream">Who It&apos;s For: </span>
+                      <span className="font-semibold text-ark-deep">Who It&apos;s For: </span>
                       {entry.whoItsFor}
                     </p>
 
-                    <p className="mt-5 font-semibold text-ark-cream">What&apos;s Included:</p>
+                    <p className="mt-5 font-semibold text-ark-deep">What&apos;s Included:</p>
                     <ul className="mt-2 space-y-1.5">
                       {entry.includes.map((item) => (
                         <li key={item} className="flex gap-2">
@@ -57,7 +57,7 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
 
                     <Link
                       href="/contact"
-                      className="mt-5 inline-block text-sm font-semibold text-ark-cream underline-offset-4 hover:underline"
+                      className="mt-5 inline-block text-sm font-semibold text-ark-olive underline-offset-4 hover:underline"
                     >
                       Learn more &amp; book &rarr;
                     </Link>
