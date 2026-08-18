@@ -7,9 +7,11 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <p className="max-w-xs text-sm text-white">
-              Rooted in compassion. Culturally responsive. Honoring your story through evidence-based and
-              integrative care that cultivates healing.
+            <p className="max-w-xs font-display text-xl leading-snug text-ark-cream italic">
+              Rooted in compassion. Culturally responsive.
+            </p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-ark-cream/70">
+              Honoring your story through evidence-based and integrative care that cultivates healing.
             </p>
           </div>
 
