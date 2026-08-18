@@ -4,9 +4,9 @@ import { Container } from "@/components/Container";
 import { about, founder } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Us | ARK Counseling Collective",
+  title: "About Us | ARK Collective Care",
   description:
-    "Learn about ARK Counseling Collective's trauma-informed, culturally responsive, and evidence-based approach to care.",
+    "Learn about ARK Collective Care's trauma-informed, culturally responsive, and evidence-based approach to care.",
 };
 
 export default function AboutPage() {

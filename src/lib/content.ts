@@ -1,4 +1,4 @@
-export const businessName = "ARK Counseling Collective";
+export const businessName = "ARK Collective Care";
 
 export const nav = [
   { label: "Home", href: "/" },
@@ -9,8 +9,8 @@ export const nav = [
 ] as const;
 
 export const contactInfo = {
-  email: "hello@arkcounselingcollective.com",
-  phone: "(555) 010-2727",
+  email: "arkwadu@gmail.com",
+  phone: "(302) 229-4921",
   location: "Maryland · In-person & Telehealth",
 };
 
@@ -51,7 +51,7 @@ export const homeServices: HomeServiceTeaser[] = [
 
 export const about = {
   intro:
-    "At ARK Counseling Collective, we believe healing begins when people feel seen, heard, and valued. ARK was created to provide a safe, affirming space where individuals from all walks of life can navigate life's challenges with compassion, authenticity, and hope.",
+    "At ARK Collective Care, we believe healing begins when people feel seen, heard, and valued. ARK was created to provide a safe, affirming space where individuals from all walks of life can navigate life's challenges with compassion, authenticity, and hope.",
   paragraphs: [
     "Our practice is rooted in trauma-informed, culturally responsive, and evidence-based care. We approach every client with cultural humility, recognizing that each person's identity, lived experiences, values, and strengths are central to the healing process. We are committed to fostering an inclusive environment where clients, particularly those from Black, Indigenous, and other historically marginalized communities feel respected, empowered, and understood.",
     "Whether you are seeking psychotherapy, coaching, or consultation, the ARK partners with you to cultivate resilience, promote emotional well-being, and support meaningful, lasting change. We embrace an integrative, whole-person approach, collaborating with other healthcare providers and community supports when appropriate to ensure seamless, coordinated care that honors every aspect of your well-being.",

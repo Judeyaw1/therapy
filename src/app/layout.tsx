@@ -18,9 +18,9 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ARK Counseling Collective | Rooted in Compassion",
+  title: "ARK Collective Care | Rooted in Compassion",
   description:
-    "ARK Counseling Collective offers culturally responsive, trauma-informed psychotherapy, coaching, and consultation in Maryland — in-person and via telehealth.",
+    "ARK Collective Care offers culturally responsive, trauma-informed psychotherapy, coaching, and consultation in Maryland — in-person and via telehealth.",
 };
 
 export default function RootLayout({

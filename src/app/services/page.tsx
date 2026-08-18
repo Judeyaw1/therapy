@@ -4,9 +4,9 @@ import { ServicesAccordion } from "@/components/ServicesAccordion";
 import { serviceAccordion, servicesHero } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Services | ARK Counseling Collective",
+  title: "Services | ARK Collective Care",
   description:
-    "Explore ARK Counseling Collective's psychotherapy, coaching, and consultation & training services.",
+    "Explore ARK Collective Care's psychotherapy, coaching, and consultation & training services.",
 };
 
 export default function ServicesPage() {

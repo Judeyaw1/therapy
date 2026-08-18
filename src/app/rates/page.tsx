@@ -4,8 +4,8 @@ import { Container } from "@/components/Container";
 import { feesPolicy } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Rates & Insurance | ARK Counseling Collective",
-  description: "Session formats, insurance, and payment information for ARK Counseling Collective.",
+  title: "Rates & Insurance | ARK Collective Care",
+  description: "Session formats, insurance, and payment information for ARK Collective Care.",
 };
 
 const sessionFormats = [
