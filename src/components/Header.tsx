@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import arkLogo from "@/asset/newlogo-transparent.png";
+import arkLogo from "@/asset/logo.png";
 import { businessName, nav } from "@/lib/content";
 
 export function Header() {
