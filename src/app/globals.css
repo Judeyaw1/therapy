@@ -25,6 +25,7 @@
 
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-work-sans);
+  --font-cursive: var(--font-dancing-script);
 }
 
 html {

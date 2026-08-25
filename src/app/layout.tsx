@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Work_Sans } from "next/font/google";
+import { Dancing_Script, Fraunces, Work_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
@@ -17,6 +17,12 @@ const workSans = Work_Sans({
   weight: ["400", "500", "600"],
 });
 
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 export const metadata: Metadata = {
   title: "ARK Collective Care | Rooted in Compassion",
   description:
@@ -29,7 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${fraunces.variable} ${workSans.variable} h-full`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${fraunces.variable} ${workSans.variable} ${dancingScript.variable} h-full`}
+    >
       <body className="flex min-h-full flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>

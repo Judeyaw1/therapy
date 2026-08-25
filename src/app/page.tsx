@@ -40,7 +40,7 @@ export default function HomePage() {
 
           <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl shadow-lg">
             <Image
-              src="/hero-placeholder.svg"
+              src="/Picture1.jpg"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

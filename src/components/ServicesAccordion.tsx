@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { ServiceAccordionEntry } from "@/lib/content";
@@ -36,7 +35,7 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
               style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
             >
               <div className="overflow-hidden">
-                <div className="grid gap-8 pb-8 sm:grid-cols-[1fr_auto]">
+                <div className="pb-8">
                   <div className="max-w-2xl text-ark-deep/80">
                     <p className="leading-relaxed">{entry.intro}</p>
 
@@ -61,10 +60,6 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
                     >
                       Learn more &amp; book &rarr;
                     </Link>
-                  </div>
-
-                  <div className="relative aspect-4/5 w-full flex-none overflow-hidden rounded-2xl sm:w-80">
-                    <Image src={entry.image} alt="" fill sizes="320px" className="object-cover" />
                   </div>
                 </div>
               </div>

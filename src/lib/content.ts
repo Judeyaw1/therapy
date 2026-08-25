@@ -33,13 +33,13 @@ export const homeServices: HomeServiceTeaser[] = [
     id: "psychotherapy",
     title: "Psychotherapy",
     body: "We provide evidence-based psychotherapy services tailored to your unique needs, including individual, relational, family, and group therapy.",
-    image: "/service-psychotherapy.svg",
+    image: "/Picture2.png",
   },
   {
     id: "consultation",
     title: "Consulting",
     body: "Clinical consultation to cultural responsiveness training, workshops, and organizational wellness",
-    image: "/service-consultation.svg",
+    image: "/Picture3.png",
   },
   {
     id: "coaching",
@@ -92,7 +92,7 @@ export const serviceCategories: ServiceCategory[] = [
   {
     id: "psychotherapy",
     title: "Psychotherapy",
-    image: "/service-psychotherapy.svg",
+    image: "/Picture2.png",
     items: [
       {
         title: "Individual Therapy",
@@ -159,7 +159,7 @@ export const serviceCategories: ServiceCategory[] = [
   {
     id: "consultation",
     title: "Consultation & Training",
-    image: "/service-consultation.svg",
+    image: "/Picture3.png",
     items: [
       {
         title: "Clinical Consultation",
@@ -202,7 +202,6 @@ export type ServiceAccordionEntry = {
   intro: string;
   whoItsFor: string;
   includes: string[];
-  image: string;
 };
 
 export const serviceAccordion: ServiceAccordionEntry[] = [
@@ -213,7 +212,6 @@ export const serviceAccordion: ServiceAccordionEntry[] = [
     whoItsFor:
       "Individuals, couples, families, and groups navigating anxiety, depression, trauma, relationship challenges, or major life transitions.",
     includes: serviceCategories.find((category) => category.id === "psychotherapy")!.items.map((item) => item.title),
-    image: serviceCategories.find((category) => category.id === "psychotherapy")!.image,
   },
   {
     id: "consultation",
@@ -221,7 +219,6 @@ export const serviceAccordion: ServiceAccordionEntry[] = [
     intro: homeServices.find((service) => service.id === "consultation")!.body,
     whoItsFor: "Providers, organizations, and teams looking to build more culturally responsive, sustainable systems of care.",
     includes: serviceCategories.find((category) => category.id === "consultation")!.items.map((item) => item.title),
-    image: serviceCategories.find((category) => category.id === "consultation")!.image,
   },
   {
     id: "coaching",
@@ -230,7 +227,6 @@ export const serviceAccordion: ServiceAccordionEntry[] = [
     whoItsFor:
       "Individuals and professionals seeking a future-focused space to clarify goals, navigate transitions, and build confidence. Coaching is not a substitute for psychotherapy or mental health treatment.",
     includes: serviceCategories.find((category) => category.id === "coaching")!.items.map((item) => item.title),
-    image: serviceCategories.find((category) => category.id === "coaching")!.image,
   },
 ];
 

@@ -16,7 +16,7 @@ export default function ContactPage() {
             Let&apos;s start the conversation
           </h1>
           <p className="mt-4 max-w-2xl text-ark-deep/75">
-            Send us a note and we&apos;ll follow up to schedule a free consultation.
+          Send us a message and we'll follow up to schedule a free 15 minute phone consultation.
           </p>
         </Container>
       </section>
