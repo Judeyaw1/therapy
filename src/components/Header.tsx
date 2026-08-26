@@ -19,7 +19,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ark-deep/10 bg-[var(--background)]/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-ark-deep/10 bg-(--background)/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" className="flex items-center">
           <Image src={arkLogo} alt={businessName} className="h-10 w-auto sm:h-12" preload />
@@ -69,7 +69,7 @@ export function Header() {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-ark-deep/10 bg-[var(--background)] transition-[max-height] duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-ark-deep/10 bg-background transition-[max-height] duration-300 md:hidden ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >

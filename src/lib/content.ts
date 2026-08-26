@@ -95,29 +95,31 @@ export const serviceCategories: ServiceCategory[] = [
     image: "/Picture2.png",
     items: [
       {
-        title: "Individual Therapy",
+        title: "Individual",
         badge: "Individual",
         description:
-          "One-on-one, 50-minute sessions to explore patterns, build resilience, and work through what's weighing on you.",
+          "Provides a confidential and collaborative space to explore personal challenges, increase self-awareness, and develop healthier ways of coping and relating.",
         tags: ["Anxiety & Depression", "Trauma", "Life Transitions"],
       },
       {
-        title: "Couples Therapy",
-        badge: "Couples",
-        description: "60-minute sessions focused on communication, trust, and reconnecting with your partner.",
-        tags: ["Communication", "Trust & Intimacy", "Conflict Resolution"],
+        title: "Relational",
+        badge: "Relational",
+        description:
+          "A therapeutic space for two or more individuals to improve communication, strengthen understanding, and work through relational challenges in a supportive environment. This service may include friends, colleagues, or other non-romantic relationships seeking healthier interaction and connection.",
+        tags: ["Communication", "Connection", "Conflict Resolution"],
       },
       {
-        title: "Family Therapy",
+        title: "Family",
         badge: "Family",
         description:
-          "60-minute sessions to navigate family dynamics and strengthen relationships across every stage of life.",
+          "Supporting families in improving communication, strengthening relationships, and navigating challenges together. Sessions focus on understanding patterns within the family system, addressing conflict, increasing connection, and developing healthier ways of interacting. Family therapy may be helpful during periods of transition, behavioral concerns, parenting challenges, or ongoing relational stress.",
         tags: ["Parent-Child Relations", "Blended Families", "Family Conflict"],
       },
       {
-        title: "Group Therapy",
+        title: "Group",
         badge: "Group",
-        description: "80-minute group sessions offering shared support and steady accountability.",
+        description:
+          "Closed group therapy provides a supportive and confidential therapeutic environment where a small group of individuals begin and progress through treatment together over a set period of time. This format promotes trust, consistency, deeper connection, and meaningful personal growth as members build insight and learn from shared experiences.",
         tags: ["Shared Support", "Accountability"],
       },
     ],
@@ -200,33 +202,30 @@ export type ServiceAccordionEntry = {
   id: "psychotherapy" | "consultation" | "coaching";
   title: string;
   intro: string;
-  whoItsFor: string;
-  includes: string[];
+  includes: ServiceItem[];
 };
 
 export const serviceAccordion: ServiceAccordionEntry[] = [
   {
     id: "psychotherapy",
     title: "Psychotherapy",
-    intro: homeServices.find((service) => service.id === "psychotherapy")!.body,
-    whoItsFor:
-      "Individuals, couples, families, and groups navigating anxiety, depression, trauma, relationship challenges, or major life transitions.",
-    includes: serviceCategories.find((category) => category.id === "psychotherapy")!.items.map((item) => item.title),
+    intro:
+      "We provide evidence-based psychotherapy services tailored to your unique needs, including individual, relational, family, and group therapy. Our approach is grounded in cultural responsiveness, recognizing and honoring the diverse identities, values, and lived experiences that shape each person's journey. Through a collaborative, whole-person approach, we coordinate with your other healthcare providers and support systems to promote seamless, integrative care and foster meaningful, lasting healing.",
+    includes: serviceCategories.find((category) => category.id === "psychotherapy")!.items,
   },
   {
     id: "consultation",
     title: "Consulting",
-    intro: homeServices.find((service) => service.id === "consultation")!.body,
-    whoItsFor: "Providers, organizations, and teams looking to build more culturally responsive, sustainable systems of care.",
-    includes: serviceCategories.find((category) => category.id === "consultation")!.items.map((item) => item.title),
+    intro:
+      "We provide thoughtful, culturally responsive consulting and training designed to strengthen clinical practice, support organizational wellness, and foster healthier, more inclusive environments. Services include clinical consultation, cultural responsiveness training, workshops, speaking engagements, and tailored wellness programming for organizations.",
+    includes: serviceCategories.find((category) => category.id === "consultation")!.items,
   },
   {
     id: "coaching",
     title: "Coaching",
-    intro: homeServices.find((service) => service.id === "coaching")!.body,
-    whoItsFor:
-      "Individuals and professionals seeking a future-focused space to clarify goals, navigate transitions, and build confidence. Coaching is not a substitute for psychotherapy or mental health treatment.",
-    includes: serviceCategories.find((category) => category.id === "coaching")!.items.map((item) => item.title),
+    intro:
+      "Life coaching is a collaborative, strengths-based process designed to help you clarify goals, navigate life transitions, build confidence, and create meaningful, lasting change. Through a culturally responsive and mindfulness-informed approach, we support personal and professional growth while helping you align your actions with your values. Coaching is future-focused and is not a substitute for psychotherapy or mental health treatment.",
+    includes: serviceCategories.find((category) => category.id === "coaching")!.items,
   },
 ];
 

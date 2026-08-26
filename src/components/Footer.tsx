@@ -10,7 +10,7 @@ export function Footer() {
             <p className="max-w-xs font-display text-3xl leading-snug text-ark-cream italic">
               Rooted in compassion. Culturally responsive.
             </p>
-            <p className="mt-3 max-w-xs font-cursive text-lg leading-relaxed text-ark-cream/70">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white">
               Honoring your story through evidence-based and integrative care that cultivates healing.
             </p>
           </div>

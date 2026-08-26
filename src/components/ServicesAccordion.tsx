@@ -39,17 +39,15 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
                   <div className="max-w-2xl text-ark-deep/80">
                     <p className="leading-relaxed">{entry.intro}</p>
 
-                    <p className="mt-5">
-                      <span className="font-semibold text-ark-deep">Who It&apos;s For: </span>
-                      {entry.whoItsFor}
-                    </p>
-
                     <p className="mt-5 font-semibold text-ark-deep">What&apos;s Included:</p>
-                    <ul className="mt-2 space-y-1.5">
+                    <ul className="mt-2 space-y-3">
                       {entry.includes.map((item) => (
-                        <li key={item} className="flex gap-2">
+                        <li key={item.title} className="flex gap-2">
                           <span aria-hidden>&bull;</span>
-                          <span>{item}</span>
+                          <span>
+                            <span className="font-semibold text-ark-deep">{item.title}: </span>
+                            {item.description}
+                          </span>
                         </li>
                       ))}
                     </ul>
