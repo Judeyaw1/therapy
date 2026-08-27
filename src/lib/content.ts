@@ -15,7 +15,7 @@ export const contactInfo = {
 };
 
 export const hero = {
-  eyebrow: "Rooted in compassion. Culturally responsive.",
+  eyebrowLines: ["Rooted in compassion.", "Culturally responsive."],
   heading: "Honoring your story through evidence-based and integrative care that cultivates healing.",
   primaryCta: { label: "Book a Consultation", href: "/contact" },
   secondaryCta: { label: "Explore Our Services", href: "/services" },

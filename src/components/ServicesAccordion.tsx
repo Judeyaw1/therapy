@@ -6,6 +6,19 @@ import type { ServiceAccordionEntry } from "@/lib/content";
 
 export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[] }) {
   const [openId, setOpenId] = useState<string | null>(entries[0]?.id ?? null);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+
+  const toggleItem = (key: string) => {
+    setExpandedItems((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
+  };
 
   return (
     <div className="border-t border-ark-deep/10">
@@ -41,15 +54,28 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
 
                     <p className="mt-5 font-semibold text-ark-deep">What&apos;s Included:</p>
                     <ul className="mt-2 space-y-3">
-                      {entry.includes.map((item) => (
-                        <li key={item.title} className="flex gap-2">
-                          <span aria-hidden>&bull;</span>
-                          <span>
-                            <span className="font-semibold text-ark-deep">{item.title}: </span>
-                            {item.description}
-                          </span>
-                        </li>
-                      ))}
+                      {entry.includes.map((item) => {
+                        const key = `${entry.id}-${item.title}`;
+                        const isExpanded = expandedItems.has(key);
+                        return (
+                          <li key={item.title} className="flex gap-2">
+                            <span aria-hidden>&bull;</span>
+                            <div>
+                              <p className={!isExpanded ? "line-clamp-1" : undefined}>
+                                <span className="font-semibold text-ark-deep">{item.title}: </span>
+                                {item.description}
+                              </p>
+                              <button
+                                type="button"
+                                onClick={() => toggleItem(key)}
+                                className="mt-1 text-sm font-semibold text-ark-olive underline-offset-4 hover:underline"
+                              >
+                                {isExpanded ? "Show less" : "Read more"}
+                              </button>
+                            </div>
+                          </li>
+                        );
+                      })}
                     </ul>
 
                     <Link

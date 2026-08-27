@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 const sessionFormats = [
-  { service: "Individual Therapy", length: "50-minute session" },
-  { service: "Couples Therapy", length: "60-minute session" },
-  { service: "Family Therapy", length: "60-minute session" },
-  { service: "Group Therapy", length: "80-minute session" },
-  { service: "Coaching", length: "50-minute session" },
-  { service: "Consultation & Training", length: "By arrangement" },
+  { service: "Individual Therapy", length: "55-minute session" },
+  { service: "Relational Therapy", length: "55-minute session" },
+  { service: "Family Therapy", length: "55-minute session" },
+  { service: "Group Therapy", length: "55-minute session" },
+  { service: "Coaching", length: "55-minute session" },
+  { service: "Consulting", length: "By arrangement" },
 ];
 
 const paymentMethods = ["Credit & debit cards", "HSA / FSA cards", "Cash & check"];

@@ -18,10 +18,14 @@ export default function HomePage() {
 
         <Container className="grid items-center gap-12 py-24 lg:grid-cols-2 lg:py-32">
           <div className="flex flex-col items-start gap-8">
-            <p className="font-display text-4xl leading-[1.1] font-medium text-ark-deep sm:text-5xl lg:text-6xl">
-              {hero.eyebrow}
+            <p className="font-display text-3xl leading-[1.15] font-medium text-ark-deep sm:text-4xl lg:text-5xl">
+              {hero.eyebrowLines.map((line) => (
+                <span key={line} className="block whitespace-nowrap">
+                  {line}
+                </span>
+              ))}
             </p>
-            <h1 className="font-cursive text-2xl leading-snug text-ark-deep/80 sm:text-3xl lg:text-4xl">
+            <h1 className="text-lg leading-relaxed text-ark-deep/80 sm:text-xl">
               {hero.heading}
             </h1>
             <div className="flex flex-col gap-4 sm:flex-row">
