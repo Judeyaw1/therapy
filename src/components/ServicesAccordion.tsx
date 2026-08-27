@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Reveal } from "@/components/Reveal";
 import type { ServiceAccordionEntry } from "@/lib/content";
 
 export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[] }) {
@@ -22,18 +23,20 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
 
   return (
     <div className="border-t border-ark-deep/10">
-      {entries.map((entry) => {
+      {entries.map((entry, entryIndex) => {
         const isOpen = openId === entry.id;
         return (
-          <div key={entry.id} className="border-b border-ark-deep/10">
+          <Reveal key={entry.id} delay={entryIndex * 100} className="group border-b border-ark-deep/10">
             <button
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpenId(isOpen ? null : entry.id)}
               className="flex w-full items-center justify-between py-6 text-left"
             >
-              <span className="font-display text-xl font-medium text-ark-deep sm:text-2xl">{entry.title}</span>
-              <span className="relative ml-6 h-4 w-4 flex-none">
+              <span className="font-display text-xl font-medium text-ark-deep transition-colors group-hover:text-ark-olive sm:text-2xl">
+                {entry.title}
+              </span>
+              <span className="relative ml-6 h-4 w-4 flex-none transition-transform duration-300 group-hover:scale-110">
                 <span className="absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-deep" />
                 <span
                   className={`absolute top-1/2 left-0 h-px w-4 -translate-y-1/2 bg-ark-deep transition-transform duration-200 ${
@@ -63,19 +66,26 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
                               type="button"
                               aria-expanded={isExpanded}
                               onClick={() => toggleItem(key)}
-                              className="flex w-full items-center justify-between gap-2 py-2.5 text-left"
+                              className="flex w-full items-center justify-between gap-2 rounded-lg px-2 py-2.5 text-left transition-colors hover:bg-ark-cream/50 -mx-2"
                             >
                               <span className="font-semibold text-ark-deep">{item.title}</span>
                               <span
                                 aria-hidden
-                                className={`text-ark-olive transition-transform duration-200 ${
-                                  isExpanded ? "rotate-90" : ""
+                                className={`text-ark-olive transition-transform duration-300 ${
+                                  isExpanded ? "translate-x-0.5 rotate-90" : ""
                                 }`}
                               >
                                 &rarr;
                               </span>
                             </button>
-                            {isExpanded && <p className="pb-3">{item.description}</p>}
+                            <div
+                              className="grid transition-[grid-template-rows] duration-300 ease-in-out"
+                              style={{ gridTemplateRows: isExpanded ? "1fr" : "0fr" }}
+                            >
+                              <div className="overflow-hidden">
+                                <p className="px-2 pb-3">{item.description}</p>
+                              </div>
+                            </div>
                           </li>
                         );
                       })}
@@ -91,7 +101,7 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         );
       })}
     </div>

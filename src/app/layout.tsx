@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, Fraunces, Work_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${workSans.variable} ${dancingScript.variable} h-full`}
     >
       <body className="flex min-h-full flex-col antialiased">
+        <ScrollProgress />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -32,11 +32,16 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-ark-olive ${
+                className={`group relative text-sm font-medium transition-colors hover:text-ark-olive ${
                   isActive ? "text-ark-olive" : "text-ark-deep"
                 }`}
               >
                 {item.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-ark-olive transition-transform duration-300 ease-out group-hover:scale-x-100 ${
+                    isActive ? "scale-x-100" : ""
+                  }`}
+                />
               </Link>
             );
           })}
@@ -45,7 +50,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className="hidden rounded-full bg-ark-sage px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ark-olive md:inline-block"
+            className="hidden rounded-full bg-ark-sage px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-ark-olive active:scale-95 md:inline-block"
           >
             Book a Consultation
           </Link>

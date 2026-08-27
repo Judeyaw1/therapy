@@ -10,7 +10,6 @@ export const nav = [
 
 export const contactInfo = {
   email: "arkwadu@gmail.com",
-  phone: "(302) 229-4921",
   location: "Maryland · In-person & Telehealth",
 };
 
@@ -248,21 +247,38 @@ export const serviceAccordion: ServiceAccordionEntry[] = [
   },
 ];
 
+export const inNetworkInsurers = [
+  "Aetna, Trustmark, Luminare",
+  "CareFirst/BlueCross and BlueShield/Anthem",
+  "Cigna/Evernorth",
+  "United Healthcare and Optum: Surest, GEHA, Harvard Pilgrim, UnitedHealthcare Student Resources, United Medical Resources (UMR)",
+  "MultiPlan",
+];
+
+export type FeesPolicyEntry = {
+  title: string;
+  body?: string;
+  list?: string[];
+};
+
 export const feesPolicy = {
   eyebrow: "Fees & Payment Policy",
   sections: [
+    {
+      title: "Payment Methods",
+      list: ["Credit & debit cards", "HSA / FSA cards", "Cash & check"],
+    },
     {
       title: "Session Formats & Fees",
       body: "Session length and cadence vary by service — starting from 55 minutes onward. Specific fees are discussed during your initial consultation or scheduled intake.",
     },
     {
-      title: "Insurance & Reimbursement",
-      body: "Insurance coverage varies by plan. Reach out and we'll help you understand your in-network and out-of-network options before your first session.",
+      title: "Good Faith Estimate",
+      body: "Under the No Surprises Act, you have the right to receive a Good Faith Estimate of expected charges for services if you are not using insurance. We provide this estimate in writing before your first appointment and any time your care plan changes.",
     },
     {
-      title: "Payment Methods",
-      body: "We accept credit and debit cards, HSA/FSA cards, and cash or check. Full payment is due at the time of service.",
+      title: "Non-Clinical Services",
+      body: "Non-clinical services are on a private-pay basis. These services are not eligible for health insurance reimbursement or superbills.",
     },
-  ],
-  cta: { label: "See full rates & insurance details", href: "/rates" },
+  ] satisfies FeesPolicyEntry[],
 };

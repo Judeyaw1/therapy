@@ -33,7 +33,6 @@ export function Footer() {
             <p className="text-xs font-semibold tracking-widest text-ark-tan uppercase">Contact</p>
             <ul className="mt-4 space-y-2.5 text-sm text-white">
               <li>{contactInfo.email}</li>
-              <li>{contactInfo.phone}</li>
               <li>{contactInfo.location}</li>
             </ul>
           </div>
