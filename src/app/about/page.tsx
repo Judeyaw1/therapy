@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { about, founder } from "@/lib/content";
 
@@ -13,15 +14,28 @@ export default function AboutPage() {
   return (
     <>
       <section className="border-b border-ark-deep/10 bg-ark-cream/40 py-20">
-        <Container>
-          <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">About Us</p>
-          <h1 className="mt-3 font-display text-lg font-medium text-ark-deep sm:text-xl">
-            {about.intro}
-          </h1>
+        <Container className="max-w-3xl">
+          <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase"></p>
+          <h1 className="mt-3 font-display text-4xl font-medium text-ark-deep sm:text-5xl">{about.heading}</h1>
+          <p className="mt-5 leading-relaxed text-ark-deep/75">{about.intro}</p>
         </Container>
       </section>
 
       <section className="py-20">
+        <Container>
+          <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">Our Approach</p>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {about.pillars.map((pillar) => (
+              <div key={pillar.title} className="border-t-2 border-ark-olive pt-4">
+                <h2 className="font-display text-lg font-medium text-ark-deep">{pillar.title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-ark-deep/75">{pillar.body}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-ark-deep/10 bg-ark-cream/30 py-20">
         <Container className="max-w-3xl space-y-6">
           {about.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="leading-relaxed text-ark-deep/80">
@@ -71,6 +85,12 @@ export default function AboutPage() {
           <p className="mt-5 font-display text-2xl leading-relaxed font-medium text-white sm:text-3xl">
             {about.mission.body}
           </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ark-deep transition-colors hover:bg-ark-tan"
+          >
+            Book a Consultation
+          </Link>
         </Container>
       </section>
     </>

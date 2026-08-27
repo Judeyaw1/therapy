@@ -24,8 +24,7 @@ export default function RatesPage() {
     <>
       <section className="border-b border-ark-deep/10 bg-ark-cream/40 py-20">
         <Container>
-          <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">Rates &amp; Insurance</p>
-          <h1 className="mt-3 max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
+          <h1 className="max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
             Investing in your care
           </h1>
           <p className="mt-4 max-w-2xl text-ark-deep/75">
@@ -37,7 +36,7 @@ export default function RatesPage() {
 
       <section className="py-20">
         <Container>
-          <h2 className="font-display text-2xl font-medium text-ark-deep">Session Formats</h2>
+          <h2 className="text-center font-display text-2xl font-medium text-ark-deep">Session Formats</h2>
           <div className="mt-8 overflow-hidden rounded-2xl border border-ark-deep/10">
             {sessionFormats.map((row, index) => (
               <div
@@ -81,14 +80,6 @@ export default function RatesPage() {
             </p>
           </div>
 
-          <div className="mt-14 text-center">
-            <Link
-              href="/contact"
-              className="inline-block rounded-full bg-ark-deep px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-ark-olive"
-            >
-              Ask About Rates
-            </Link>
-          </div>
         </Container>
       </section>
 
@@ -103,6 +94,15 @@ export default function RatesPage() {
                 <p className="mt-3 leading-relaxed text-ark-deep/75">{section.body}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-ark-deep px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-ark-olive"
+            >
+              Ask About Rates
+            </Link>
           </div>
         </Container>
       </section>

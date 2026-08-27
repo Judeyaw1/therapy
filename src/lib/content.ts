@@ -50,8 +50,27 @@ export const homeServices: HomeServiceTeaser[] = [
 ];
 
 export const about = {
+  heading: "Healing begins when you feel seen, heard, and valued.",
   intro:
     "At ARK Collective Care, we believe healing begins when people feel seen, heard, and valued. ARK was created to provide a safe, affirming space where individuals from all walks of life can navigate life's challenges with compassion, authenticity, and hope.",
+  pillars: [
+    {
+      title: "Culturally Responsive",
+      body: "We approach every client with cultural humility, honoring the identities, lived experiences, and strengths that shape their healing.",
+    },
+    {
+      title: "Trauma-Informed",
+      body: "Care is grounded in trauma-informed, evidence-based practices that meet you exactly where you are.",
+    },
+    {
+      title: "Whole-Person & Integrative",
+      body: "We collaborate with your other healthcare providers and support systems for seamless, coordinated care.",
+    },
+    {
+      title: "Inclusive & Affirming",
+      body: "We're committed to an inclusive space where clients — particularly those from Black, Indigenous, and other historically marginalized communities — feel respected and understood.",
+    },
+  ],
   paragraphs: [
     "Our practice is rooted in trauma-informed, culturally responsive, and evidence-based care. We approach every client with cultural humility, recognizing that each person's identity, lived experiences, values, and strengths are central to the healing process. We are committed to fostering an inclusive environment where clients, particularly those from Black, Indigenous, and other historically marginalized communities feel respected, empowered, and understood.",
     "Whether you are seeking psychotherapy, coaching, or consultation, the ARK partners with you to cultivate resilience, promote emotional well-being, and support meaningful, lasting change. We embrace an integrative, whole-person approach, collaborating with other healthcare providers and community supports when appropriate to ensure seamless, coordinated care that honors every aspect of your well-being.",
@@ -234,7 +253,7 @@ export const feesPolicy = {
   sections: [
     {
       title: "Session Formats & Fees",
-      body: "Session length and cadence vary by service — from 50-minute individual sessions to 80-minute group sessions. Specific fees are discussed during your initial consultation or scheduled intake.",
+      body: "Session length and cadence vary by service — starting from 55 minutes onward. Specific fees are discussed during your initial consultation or scheduled intake.",
     },
     {
       title: "Insurance & Reimbursement",
