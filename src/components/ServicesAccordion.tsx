@@ -53,26 +53,29 @@ export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[
                     <p className="leading-relaxed">{entry.intro}</p>
 
                     <p className="mt-5 font-semibold text-ark-deep">What&apos;s Included:</p>
-                    <ul className="mt-2 space-y-3">
+                    <ul className="mt-2 divide-y divide-ark-deep/10">
                       {entry.includes.map((item) => {
                         const key = `${entry.id}-${item.title}`;
                         const isExpanded = expandedItems.has(key);
                         return (
-                          <li key={item.title} className="flex gap-2">
-                            <span aria-hidden>&bull;</span>
-                            <div>
-                              <p className={!isExpanded ? "line-clamp-1" : undefined}>
-                                <span className="font-semibold text-ark-deep">{item.title}: </span>
-                                {item.description}
-                              </p>
-                              <button
-                                type="button"
-                                onClick={() => toggleItem(key)}
-                                className="mt-1 text-sm font-semibold text-ark-olive underline-offset-4 hover:underline"
+                          <li key={item.title}>
+                            <button
+                              type="button"
+                              aria-expanded={isExpanded}
+                              onClick={() => toggleItem(key)}
+                              className="flex w-full items-center justify-between gap-2 py-2.5 text-left"
+                            >
+                              <span className="font-semibold text-ark-deep">{item.title}</span>
+                              <span
+                                aria-hidden
+                                className={`text-ark-olive transition-transform duration-200 ${
+                                  isExpanded ? "rotate-90" : ""
+                                }`}
                               >
-                                {isExpanded ? "Show less" : "Read more"}
-                              </button>
-                            </div>
+                                &rarr;
+                              </span>
+                            </button>
+                            {isExpanded && <p className="pb-3">{item.description}</p>}
                           </li>
                         );
                       })}
