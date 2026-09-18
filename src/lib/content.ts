@@ -2,7 +2,7 @@ export const businessName = "ARK Collective Care";
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Rates & Insurance", href: "/rates" },
   { label: "Contact", href: "/contact" },
@@ -49,7 +49,6 @@ export const homeServices: HomeServiceTeaser[] = [
 ];
 
 export const about = {
-  heading: "Healing begins when you feel seen, heard, and valued.",
   intro:
     "At ARK Collective Care, we believe healing begins when people feel seen, heard, and valued. ARK was created to provide a safe, affirming space where individuals from all walks of life can navigate life's challenges with compassion, authenticity, and hope.",
   pillars: [
@@ -156,23 +155,10 @@ export const serviceCategories: ServiceCategory[] = [
         tags: ["Goal Setting", "Life Transitions"],
       },
       {
-        title: "Mindfulness Coaching",
-        badge: "Mindfulness",
-        description:
-          "A mindfulness-informed approach to building presence, reducing stress, and aligning your actions with your values.",
-        tags: ["Mindfulness", "Stress Management"],
-      },
-      {
         title: "Executive/Leadership Coaching (if applicable)",
         badge: "Leadership",
         description: "Future-focused coaching for professionals navigating leadership growth and workplace transitions.",
         tags: ["Leadership", "Professional Growth"],
-      },
-      {
-        title: "Wellness Coaching",
-        badge: "Wellness",
-        description: "Support across life, mindfulness, and wellness goals — future-focused and collaborative.",
-        tags: ["Wellness", "Balance"],
       },
     ],
   },

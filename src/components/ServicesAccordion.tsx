@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import type { ServiceAccordionEntry } from "@/lib/content";
 
 export function ServicesAccordion({ entries }: { entries: ServiceAccordionEntry[] }) {
-  const [openId, setOpenId] = useState<string | null>(entries[0]?.id ?? null);
+  const [openId, setOpenId] = useState<string | null>(null);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   const toggleItem = (key: string) => {

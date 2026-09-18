@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { AboutTabs } from "@/components/AboutTabs";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { about, founder } from "@/lib/content";
+import { about } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Us | ARK Collective Care",
+  title: "About | ARK Collective Care",
   description:
     "Learn about ARK Collective Care's trauma-informed, culturally responsive, and evidence-based approach to care.",
 };
@@ -22,13 +22,15 @@ export default function AboutPage() {
         />
         <Container className="max-w-3xl">
           <Reveal>
-            <h1 className="font-display text-4xl font-medium text-ark-deep sm:text-5xl">{about.heading}</h1>
+            <h1 className="font-display text-4xl font-medium text-ark-deep sm:text-5xl">Who We Are</h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-5 leading-relaxed text-ark-deep/75">{about.intro}</p>
+            <p className="mt-4 leading-relaxed text-ark-deep/75">{about.intro}</p>
           </Reveal>
         </Container>
       </section>
+
+      <AboutTabs />
 
       <section className="py-20">
         <Container>
@@ -54,47 +56,11 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20">
-        <Container>
-          <Reveal className="mb-14 max-w-2xl">
-            <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">Meet the Founder</p>
-          </Reveal>
-
-          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_2fr]">
-            <Reveal className="group relative aspect-4/5 w-full max-w-sm overflow-hidden rounded-3xl shadow-lg">
-              <Image
-                src={founder.photo}
-                alt={founder.name}
-                fill
-                sizes="(max-width: 1024px) 100vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </Reveal>
-
-            <Reveal delay={150}>
-              <h2 className="font-display text-2xl font-medium text-ark-deep sm:text-3xl">{founder.name}</h2>
-              <p className="mt-1 text-sm font-semibold tracking-wide text-ark-olive uppercase">
-                {founder.credentials}
-              </p>
-              <div className="mt-6 space-y-5">
-                {founder.bio.map((paragraph) => (
-                  <p key={paragraph.slice(0, 24)} className="leading-relaxed text-ark-deep/80">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       <section className="bg-ark-deep py-20 text-ark-cream">
         <Container className="max-w-3xl">
           <Reveal>
             <p className="text-sm font-semibold tracking-widest text-ark-tan uppercase">{about.mission.label}</p>
-            <p className="mt-5 font-display text-2xl leading-relaxed font-medium text-white sm:text-3xl">
-              {about.mission.body}
-            </p>
+            <p className="mt-5 leading-relaxed text-white/90">{about.mission.body}</p>
             <Link
               href="/contact"
               className="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ark-deep transition-all duration-200 hover:scale-105 hover:bg-ark-tan active:scale-95"

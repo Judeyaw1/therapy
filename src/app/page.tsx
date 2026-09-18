@@ -36,22 +36,6 @@ export default function HomePage() {
             <Reveal delay={220}>
               <h1 className="text-lg leading-relaxed text-ark-deep/80 sm:text-xl">{hero.heading}</h1>
             </Reveal>
-            <Reveal delay={340}>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href={hero.primaryCta.href}
-                  className="rounded-full bg-ark-deep px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-ark-olive active:scale-95"
-                >
-                  {hero.primaryCta.label}
-                </Link>
-                <Link
-                  href={hero.secondaryCta.href}
-                  className="rounded-full border border-ark-deep/30 px-7 py-3.5 text-sm font-semibold text-ark-deep transition-all duration-200 hover:scale-105 hover:border-ark-deep hover:bg-white/40 active:scale-95"
-                >
-                  {hero.secondaryCta.label}
-                </Link>
-              </div>
-            </Reveal>
           </div>
 
           <Reveal delay={150} className="relative aspect-4/5 w-full overflow-hidden rounded-3xl shadow-lg">
@@ -71,13 +55,6 @@ export default function HomePage() {
 
       <section className="py-24">
         <Container>
-          <Reveal className="mb-14 max-w-2xl">
-            <p className="text-sm font-semibold tracking-widest text-ark-olive uppercase">Our Services</p>
-            <h2 className="mt-3 font-display text-3xl font-medium text-ark-deep sm:text-4xl">
-              Whole-person care, tailored to you
-            </h2>
-          </Reveal>
-
           <div className="grid items-start gap-6 md:grid-cols-3">
             {homeServices.map((service, index) => (
               <Reveal
@@ -117,11 +94,6 @@ export default function HomePage() {
 
       <section className="bg-ark-sage/25 py-20">
         <Container className="flex flex-col items-center gap-6 text-center">
-          <Reveal className="max-w-xl">
-            <h2 className="font-display text-3xl font-medium text-ark-deep sm:text-4xl">
-              Healing begins when you feel seen, heard, and valued.
-            </h2>
-          </Reveal>
           <p className="max-w-xl text-ark-deep/75">
             Reach out to start a conversation about what care could look like for you.
           </p>
