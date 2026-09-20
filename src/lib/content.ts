@@ -44,7 +44,7 @@ export const homeServices: HomeServiceTeaser[] = [
     id: "coaching",
     title: "Coaching",
     body: "A collaborative, strengths-based, and future-focused space to clarify goals, navigate transitions, and build a life that reflects your values — across life, mindfulness, leadership, and wellness coaching.",
-    image: "/service-coaching.svg",
+    image: "/Picture4.png",
   },
 ];
 
