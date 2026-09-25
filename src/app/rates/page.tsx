@@ -26,8 +26,8 @@ export default function RatesPage() {
           </Reveal>
           <Reveal delay={120}>
             <p className="mx-auto mt-4 max-w-2xl text-ark-deep/75">
-              Every session length below reflects our standard scheduling. Reach out and we&apos;ll confirm current
-              session fees and availability for your specific need.
+              Meaningful change begins with making space for yourself. Reach out to learn about the current fees,
+              availability, and what seeking care can look like for you.
             </p>
           </Reveal>
         </Container>
