@@ -21,8 +21,14 @@ export default function RatesPage() {
         <Container className="text-center">
           <Reveal>
             <h1 className="mx-auto max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
-              Investing in your care
+              Invest in your care
             </h1>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="mx-auto mt-4 max-w-2xl text-ark-deep/75">
+              Every session length below reflects our standard scheduling. Reach out and we&apos;ll confirm current
+              session fees and availability for your specific need.
+            </p>
           </Reveal>
         </Container>
       </section>
