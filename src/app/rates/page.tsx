@@ -27,17 +27,11 @@ export default function RatesPage() {
           className="animate-drift-reverse absolute -top-1/3 -right-1/5 -z-10 h-[65%] w-[50%] rounded-full opacity-50 blur-3xl"
           style={{ background: "#a5a58d" }}
         />
-        <Container>
+        <Container className="text-center">
           <Reveal>
-            <h1 className="max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
+            <h1 className="mx-auto max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
               Investing in your care
             </h1>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-4 max-w-2xl text-ark-deep/75">
-              Every session length below reflects our standard scheduling. Reach out and we&apos;ll confirm current
-              session fees and availability for your specific need.
-            </p>
           </Reveal>
         </Container>
       </section>

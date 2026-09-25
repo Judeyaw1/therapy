@@ -40,14 +40,14 @@ export default function ContactPage() {
           className="animate-drift absolute -top-1/3 -right-1/4 -z-10 h-[65%] w-[50%] rounded-full opacity-50 blur-3xl"
           style={{ background: "#ddbea9" }}
         />
-        <Container>
+        <Container className="text-center">
           <Reveal>
-            <h1 className="max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
+            <h1 className="mx-auto max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
               Let&apos;s start the conversation
             </h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-4 max-w-2xl text-ark-deep/75">
+            <p className="mx-auto mt-4 max-w-2xl text-ark-deep/75">
               Send us a message and we&apos;ll follow up to schedule a free 15 minute phone consultation.
             </p>
           </Reveal>

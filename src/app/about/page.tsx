@@ -20,7 +20,7 @@ export default function AboutPage() {
           className="animate-drift-slow absolute -top-1/3 -right-1/4 -z-10 h-[70%] w-[55%] rounded-full opacity-50 blur-3xl"
           style={{ background: "#ddbea9" }}
         />
-        <Container className="max-w-3xl">
+        <Container className="max-w-3xl text-center">
           <Reveal>
             <h1 className="font-display text-4xl font-medium text-ark-deep sm:text-5xl">Who We Are</h1>
           </Reveal>
