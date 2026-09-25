@@ -6,17 +6,8 @@ import { feesPolicy, inNetworkInsurers } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Rates & Insurance | ARK Collective Care",
-  description: "Session formats, insurance, and payment information for ARK Collective Care.",
+  description: "Insurance and payment information for ARK Collective Care.",
 };
-
-const sessionFormats = [
-  { service: "Individual Therapy", length: "55-minute session" },
-  { service: "Relational Therapy", length: "55-minute session" },
-  { service: "Family Therapy", length: "55-minute session" },
-  { service: "Group Therapy", length: "55-minute session" },
-  { service: "Coaching", length: "55-minute session" },
-  { service: "Consulting", length: "By arrangement" },
-];
 
 export default function RatesPage() {
   return (
@@ -39,24 +30,6 @@ export default function RatesPage() {
       <section className="py-20">
         <Container>
           <Reveal>
-            <h2 className="text-center font-display text-2xl font-medium text-ark-deep">Session Formats</h2>
-          </Reveal>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-ark-deep/10">
-            {sessionFormats.map((row, index) => (
-              <Reveal
-                key={row.service}
-                delay={index * 70}
-                className={`flex items-center justify-between px-6 py-4 text-sm transition-colors hover:bg-ark-tan/20 ${
-                  index % 2 === 1 ? "bg-ark-cream/30" : "bg-white/60"
-                }`}
-              >
-                <span className="font-medium text-ark-deep">{row.service}</span>
-                <span className="text-ark-deep/70">{row.length}</span>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="mt-16">
             <h2 className="text-center font-display text-2xl font-medium text-ark-deep">Insurance</h2>
             <p className="mt-4 leading-relaxed text-ark-deep/75">
               Insurance coverage varies by plan. Contact us and we&apos;ll help you understand your options,
