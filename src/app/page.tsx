@@ -62,15 +62,17 @@ export default function HomePage() {
                 delay={index * 120}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-ark-deep/10 bg-ark-cream/40 transition-shadow duration-300 hover:shadow-xl"
               >
-                <div className="relative aspect-4/3 w-full overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+                {service.image && (
+                  <div className="relative aspect-4/3 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="flex flex-1 flex-col gap-4 p-8">
                   <Link
                     href={`/services#${service.id}`}

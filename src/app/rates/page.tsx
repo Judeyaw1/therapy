@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { feesPolicy, inNetworkInsurers } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Rates & Insurance | ARK Collective Care",
+  title: "Rates | ARK Collective Care",
   description: "Insurance and payment information for ARK Collective Care.",
 };
 

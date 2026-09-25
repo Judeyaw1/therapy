@@ -4,7 +4,7 @@ export const nav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Rates & Insurance", href: "/rates" },
+  { label: "Rates", href: "/rates" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -24,7 +24,7 @@ export type HomeServiceTeaser = {
   id: "psychotherapy" | "consultation" | "coaching";
   title: string;
   body: string;
-  image: string;
+  image?: string;
 };
 
 export const homeServices: HomeServiceTeaser[] = [
@@ -44,7 +44,6 @@ export const homeServices: HomeServiceTeaser[] = [
     id: "coaching",
     title: "Coaching",
     body: "A collaborative, strengths-based, and future-focused space to clarify goals, navigate transitions, and build a life that reflects your values — across life, mindfulness, leadership, and wellness coaching.",
-    image: "/Picture4.png",
   },
 ];
 
