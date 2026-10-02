@@ -55,7 +55,7 @@ export default function HomePage() {
 
       <section className="py-24">
         <Container>
-          <div className="grid items-start gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {homeServices.map((service, index) => (
               <Reveal
                 key={service.id}
@@ -69,7 +69,7 @@ export default function HomePage() {
                       alt=""
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-500 ${service.imageClassName ?? "group-hover:scale-105"}`}
                     />
                   </div>
                 )}

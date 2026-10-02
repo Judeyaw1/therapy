@@ -18,14 +18,14 @@ export default function RatesPage() {
           className="animate-drift-reverse absolute -top-1/3 -right-1/5 -z-10 h-[65%] w-[50%] rounded-full opacity-50 blur-3xl"
           style={{ background: "#a5a58d" }}
         />
-        <Container className="text-center">
+        <Container className="max-w-3xl text-center">
           <Reveal>
-            <h1 className="mx-auto max-w-2xl font-display text-4xl font-medium text-ark-deep sm:text-5xl">
-              Invest in your care
+            <h1 className="font-display text-4xl font-medium text-ark-deep sm:text-5xl">
+              Invest In Your Care
             </h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mx-auto mt-4 max-w-2xl text-ark-deep/75">
+            <p className="mt-4 leading-relaxed text-ark-deep/75">
               Meaningful change begins with making space for yourself. Reach out to learn about the current fees,
               availability, and what seeking care can look like for you.
             </p>

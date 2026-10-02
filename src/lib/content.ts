@@ -25,6 +25,7 @@ export type HomeServiceTeaser = {
   title: string;
   body: string;
   image?: string;
+  imageClassName?: string;
 };
 
 export const homeServices: HomeServiceTeaser[] = [
@@ -33,6 +34,8 @@ export const homeServices: HomeServiceTeaser[] = [
     title: "Psychotherapy",
     body: "We provide evidence-based psychotherapy services tailored to your unique needs, including individual, relational, family, and group therapy.",
     image: "/Picture2.png",
+    // The photo has a transparent strip along its top edge; scale from the bottom to push it out of frame.
+    imageClassName: "origin-bottom scale-[1.06] group-hover:scale-[1.11]",
   },
   {
     id: "consultation",
@@ -44,6 +47,7 @@ export const homeServices: HomeServiceTeaser[] = [
     id: "coaching",
     title: "Coaching",
     body: "A collaborative, strengths-based, and future-focused space to clarify goals, navigate transitions, and build a life that reflects your values — across life, mindfulness, leadership, and wellness coaching.",
+    image: "/service-coaching.svg",
   },
 ];
 
@@ -196,7 +200,7 @@ export const serviceCategories: ServiceCategory[] = [
 ];
 
 export const servicesHero = {
-  heading: "Care that meets you where you are",
+  heading: "Care That Meets You Where You Are",
   intro:
     "Psychotherapy, coaching, and consultation & training — matched to your goals, your schedule, and the pace that feels right for you.",
 };
